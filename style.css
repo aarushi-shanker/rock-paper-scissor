@@ -32,10 +32,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.choice:hover{
-    opacity: 0.5;
     cursor:pointer;
+}
+
+.select{
+    opacity: 0.5;
 }
 .shakeComp{
     animation: shakeComp 0.8s linear;

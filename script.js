@@ -41,6 +41,7 @@ const showWinner=(userWin)=>{
 }
 choices.forEach((choice)=>{
     choice.addEventListener("click",()=>{
+        choice.classList.add("select");
         computer.classList.add("shakeComp");
         player.classList.add("shakePlayer");
         setTimeout(()=>{
@@ -50,6 +51,7 @@ choices.forEach((choice)=>{
             player.src="./"+userChoice+"Player.png";
             let compChoice=genCompChoice();
             computer.src="./"+compChoice+"Computer.png";
+            choice.classList.remove("select");
             if(userChoice===compChoice){
                 //Draw Game
                 drawGame();
@@ -69,6 +71,8 @@ choices.forEach((choice)=>{
                 showScore(userWin);
             }
     },900);
-
+    computer.src="./rockComputer.png";
+    player.src="./rockPlayer.png";
     })
 })
+
